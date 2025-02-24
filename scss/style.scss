@@ -84,7 +84,13 @@ header{
     background-repeat: no-repeat;
     border-radius: 8px;
     box-shadow: -1px -1px 8px 3px #c4c4c4;
-    transition: background-color 0.3s ease, background-image 0.3s ease; /* Smooth transition for background color and gradient */
+    .pokecard-name{
+        text-align: center;
+    }
+    .pokecard-id{
+        float: right;
+        color: colors.$medium;
+    }
   }
   
   .pokecard[data-type="grass"]:hover {
