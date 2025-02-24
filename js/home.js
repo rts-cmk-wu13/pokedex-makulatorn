@@ -12,18 +12,16 @@ let sectionElm = document.createElement("section")
 sectionElm.className = "pokelist"
 
 fetch("https://pokeapi.co/api/v2/pokemon?limit=20")
-    .then(function(response) {
+    .then(function (response) {
         return response.json();
     })
-    .then(function(data) {
+    .then(function (data) {
         sectionElm.innerHTML = data.results.map(pokemon => {
             const pokemonId = getIdFromPokemon(pokemon.url);
             return `
-                <article>
+                <article class="pokecard">
+                <img src="${artworkUrl}/${pokemonId}.png" alt="${pokemon.name}">
                 <a href="detail.html?name=${pokemon.name}">
-                    <h2>
-                    </h2>
-                    <img src="${artworkUrl}/${pokemonId}.png" alt="${pokemon.name}">
                     ${pokemon.name}</a>
                 </article>
             `;

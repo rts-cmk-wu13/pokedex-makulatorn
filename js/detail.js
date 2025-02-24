@@ -40,5 +40,5 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
     })
     .catch(error => {
         console.error("Error fetching Pokémon data:", error);
-        document.querySelector("#root").innerHTML = "<p>Sorry, we couldn't load the Pokémon details.</p>";
+        document.querySelector("#root").innerHTML = "<p>Sorry, Pokémon details could not be found.</p>";
     });
