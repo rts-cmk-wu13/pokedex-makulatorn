@@ -1,8 +1,22 @@
 @use '../scss/colors';
+@font-face {
+    font-family: pokemon;
+    src: url(/font/Poppins/Poppins-Regular.ttf);
+}
 *{
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
+    font-family: pokemon;
+}
+
+body{
+    background-color: colors.$primary;
+}
+
+a{
+    color: colors.$dark;
+    text-decoration: none;
 }
 
 img{
@@ -12,10 +26,11 @@ img{
 }
 
 .pokedex-search{
-    background: rgb(255, 255, 255) url(/img/Vector.svg) left no-repeat;
+    background: rgb(255, 255, 255) url(../img/Vector.svg) left no-repeat;
     padding: 5px 20px 5px 20px;
     border-radius: 16px;
-    margin: 0px 10px 24px 10px;
+    margin: 0px 10px 24px 20px;
+    width: 80%;
 }
 .pokedex-sort{
     border-radius: 16px;
@@ -47,13 +62,40 @@ header{
 .pokelist{
     display: flex;
     flex-wrap: wrap;
+    background-color: colors.$white;
+    margin: 5px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    box-shadow:inset 1px 1px 4px 2px #c4c4c4;
+
 }
 
 .pokecard{
-    display: flex;
-    flex-direction: column;
-    width: 100px;
+    display: grid;
+    place-content: center;
+    width: 25%;
+    height: 120px;
     margin: 10px;
-    border: 1px solid red;
-    padding: 1em;
+    padding: 5px;
+    grid-area: 1/1;
+    background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$light 50%, colors.$light);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    box-shadow: -1px -1px 8px 3px #c4c4c4;
+    .pokecard-name{
+        text-align: center;
+    }
+    .pokecard-id{
+        float: right;
+        color: colors.$medium;
+        font-size: 10px;
+    }
+}
+.pokecard>*{
+}
+
+.pokemon-detail{
+    background-color: colors.$white;
 }
