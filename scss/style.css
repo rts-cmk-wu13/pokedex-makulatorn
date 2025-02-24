@@ -84,14 +84,97 @@ header .icon-pokeball {
   background-repeat: no-repeat;
   border-radius: 8px;
   box-shadow: -1px -1px 8px 3px #c4c4c4;
+  transition: background-color 0.3s ease, background-image 0.3s ease; /* Smooth transition for background color and gradient */
 }
-.pokecard .pokecard-name {
-  text-align: center;
+
+.pokecard[data-type=grass]:hover {
+  background-color: #74CB48;
+  background-image: linear-gradient(to bottom, #FFFFFF, #FFFFFF 50%, #74CB48 50%, #74CB48);
 }
-.pokecard .pokecard-id {
-  float: right;
-  color: #666666;
-  font-size: 10px;
+
+.pokecard[data-type=fire]:hover {
+  background-color: #F57D31;
+  background-image: linear-gradient(to bottom, #FFFFFF, #FFFFFF 50%, #F57D31 50%, #F57D31);
+}
+
+.pokecard[data-type=water]:hover {
+  background-color: #6493EB;
+  background-image: linear-gradient(to bottom, #FFFFFF, #FFFFFF 50%, #6493EB 50%, #6493EB);
+}
+
+.pokecard[data-type=electric]:hover {
+  background-color: #F9CF30;
+  background-image: linear-gradient(to bottom, #FFFFFF, #FFFFFF 50%, #F9CF30 50%, #F9CF30);
+}
+
+.pokecard[data-type=poison]:hover {
+  background-color: #A43E9E;
+  background-image: linear-gradient(to bottom, #FFFFFF, #FFFFFF 50%, #A43E9E 50%, #A43E9E);
+}
+
+.pokecard[data-type=bug]:hover {
+  background-color: #A7B723;
+  background-image: linear-gradient(to bottom, #FFFFFF, #FFFFFF 50%, #A7B723 50%, #A7B723);
+}
+
+.pokecard[data-type=dark]:hover {
+  background-color: #212121;
+  background-image: linear-gradient(to bottom, #FFFFFF, #FFFFFF 50%, #212121 50%, #212121);
+}
+
+.pokecard[data-type=dragon]:hover {
+  background-color: #7037FF;
+  background-image: linear-gradient(to bottom, #FFFFFF, #FFFFFF 50%, #7037FF 50%, #7037FF);
+}
+
+.pokecard[data-type=fairy]:hover {
+  background-color: #E69EAC;
+  background-image: linear-gradient(to bottom, #FFFFFF, #FFFFFF 50%, #E69EAC 50%, #E69EAC);
+}
+
+.pokecard[data-type=fighting]:hover {
+  background-color: #C12239;
+  background-image: linear-gradient(to bottom, #FFFFFF, #FFFFFF 50%, #C12239 50%, #C12239);
+}
+
+.pokecard[data-type=flying]:hover {
+  background-color: #A891EC;
+  background-image: linear-gradient(to bottom, #FFFFFF, #FFFFFF 50%, #A891EC 50%, #A891EC);
+}
+
+.pokecard[data-type=ghost]:hover {
+  background-color: #70559B;
+  background-image: linear-gradient(to bottom, #FFFFFF, #FFFFFF 50%, #70559B 50%, #70559B);
+}
+
+.pokecard[data-type=normal]:hover {
+  background-color: #AAA67F;
+  background-image: linear-gradient(to bottom, #FFFFFF, #FFFFFF 50%, #AAA67F 50%, #AAA67F);
+}
+
+.pokecard[data-type=ground]:hover {
+  background-color: #DEC16B;
+  background-image: linear-gradient(to bottom, #FFFFFF, #FFFFFF 50%, #DEC16B 50%, #DEC16B);
+}
+
+.pokecard[data-type=ice]:hover {
+  background-color: #9AD6DF;
+  background-image: linear-gradient(to bottom, #FFFFFF, #FFFFFF 50%, #9AD6DF 50%, #9AD6DF);
+}
+
+.pokecard[data-type=steel]:hover {
+  background-color: #B7B9D0;
+  background-image: linear-gradient(to bottom, #FFFFFF, #FFFFFF 50%, #B7B9D0 50%, #B7B9D0);
+}
+
+.pokecard[data-type=rock]:hover {
+  background-color: #B69E31;
+  background-image: linear-gradient(to bottom, #FFFFFF, #FFFFFF 50%, #B69E31 50%, #B69E31);
+}
+
+.pokecard[data-type=psychic]:hover {
+  background-color: #FB5584;
+  background-image: linear-gradient(to bottom, #FFFFFF, #FFFFFF 50%, #FB5584 50%, #FB5584);
 }
 
 .pokemon-detail {

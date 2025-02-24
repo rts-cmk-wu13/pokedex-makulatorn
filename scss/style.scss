@@ -71,7 +71,7 @@ header{
 
 }
 
-.pokecard{
+.pokecard {
     display: grid;
     place-content: center;
     width: 25%;
@@ -84,18 +84,100 @@ header{
     background-repeat: no-repeat;
     border-radius: 8px;
     box-shadow: -1px -1px 8px 3px #c4c4c4;
-    .pokecard-name{
-        text-align: center;
-    }
-    .pokecard-id{
-        float: right;
-        color: colors.$medium;
-        font-size: 10px;
-    }
-}
-.pokecard>*{
-}
-
+    transition: background-color 0.3s ease, background-image 0.3s ease; /* Smooth transition for background color and gradient */
+  }
+  
+  .pokecard[data-type="grass"]:hover {
+    background-color: colors.$grass;
+    background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$grass 50%, colors.$grass);
+  }
+  
+  .pokecard[data-type="fire"]:hover {
+    background-color: colors.$fire;
+    background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$fire 50%, colors.$fire);
+  }
+  
+  .pokecard[data-type="water"]:hover {
+    background-color: colors.$water;
+    background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$water 50%, colors.$water);
+  }
+  
+  .pokecard[data-type="electric"]:hover {
+    background-color: colors.$electric;
+    background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$electric 50%, colors.$electric);
+  }
+  
+  .pokecard[data-type="poison"]:hover {
+    background-color: colors.$poison;
+    background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$poison 50%, colors.$poison);
+  }
+  
+  .pokecard[data-type="bug"]:hover {
+    background-color: colors.$bug;
+    background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$bug 50%, colors.$bug);
+  }
+  
+  .pokecard[data-type="dark"]:hover {
+    background-color: colors.$dark;
+    background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$dark 50%, colors.$dark);
+  }
+  
+  .pokecard[data-type="dragon"]:hover {
+    background-color: colors.$dragon;
+    background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$dragon 50%, colors.$dragon);
+  }
+  
+  .pokecard[data-type="fairy"]:hover {
+    background-color: colors.$fairy;
+    background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$fairy 50%, colors.$fairy);
+  }
+  
+  .pokecard[data-type="fighting"]:hover {
+    background-color: colors.$fighting;
+    background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$fighting 50%, colors.$fighting);
+  }
+  
+  .pokecard[data-type="flying"]:hover {
+    background-color: colors.$flying;
+    background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$flying 50%, colors.$flying);
+  }
+  
+  .pokecard[data-type="ghost"]:hover {
+    background-color: colors.$ghost;
+    background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$ghost 50%, colors.$ghost);
+  }
+  
+  .pokecard[data-type="normal"]:hover {
+    background-color: colors.$normal;
+    background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$normal 50%, colors.$normal);
+  }
+  
+  .pokecard[data-type="ground"]:hover {
+    background-color: colors.$ground;
+    background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$ground 50%, colors.$ground);
+  }
+  
+  .pokecard[data-type="ice"]:hover {
+    background-color: colors.$ice;
+    background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$ice 50%, colors.$ice);
+  }
+  
+  .pokecard[data-type="steel"]:hover {
+    background-color: colors.$steel;
+    background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$steel 50%, colors.$steel);
+  }
+  
+  .pokecard[data-type="rock"]:hover {
+    background-color: colors.$rock;
+    background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$rock 50%, colors.$rock);
+  }
+  
+  .pokecard[data-type="psychic"]:hover {
+    background-color: colors.$psychic;
+    background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$psychic 50%, colors.$psychic);
+  }
+  
+  
 .pokemon-detail{
     background-color: colors.$white;
 }
