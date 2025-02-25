@@ -51,7 +51,9 @@ const fetchPokemon = () => {
             name: result.name,
             image: result.sprites.other['official-artwork'].front_default,
             type: result.types[0].type.name,
-            id: result.id
+            id: result.id,
+            weight: result.weight,
+            height: result.height
         }));
         //transformation results in a new array (pokemon), contains simplified data
 
@@ -70,7 +72,7 @@ const appendToMain = pokeArray => {
         <article class="pokecard" data-type="${pokemon.type}">
             <a class="pokecard-name" href="detail.html?name=${pokemon.name}" style="font-size:80%;">
                 <p class="pokecard-id">#${String(pokemon.id).padStart(3, '0')}</p>
-                <img src="${pokemon.image}" alt="Official artwork of ${pokemon.name}">
+                <img src="${pokemon.image}" class="pokecard-img" alt="Official artwork of ${pokemon.name}">
                 ${pokemon.name}
             </a>
         </article>

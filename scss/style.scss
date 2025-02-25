@@ -19,7 +19,7 @@ a{
     text-decoration: none;
 }
 
-img{
+.pokecard-img{
     width: 100%;
     height: auto;
     max-width: 72px;
@@ -36,9 +36,7 @@ img{
     border-radius: 16px;
     background-color: white;
     padding: 5px;
-    img{
-        height: 12px;
-    }
+    color: colors.$primary;
 }
 header{
     background-color: colors.$primary;
@@ -189,4 +187,62 @@ header{
   
 .pokemon-detail{
     background-color: colors.$white;
+    .pokemon-detail-name{
+      display: flex;
+    }
+}
+
+.pokemon-img-con{
+  text-align: center;
+  .pokemon-img{
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+  }
+}
+
+.pokemon-type-con{
+  text-align: center;
+  .pokemon-type{
+    display: flex;
+    width: 50%;
+  }
+}
+
+.pokemon-about, .pokemon-stats{
+  text-align: center;
+}
+.pokemon-about-info{
+  display: flex;
+}
+
+.pokemon-stats-list{
+  display: flex;
+}
+
+.pokemon-stat-label{
+  display: flex;
+
+}
+
+.pokemon-stat-meter{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 0;
+}
+.pokemon-meter{
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 180px;
+}
+
+.pokemon-stat-con{
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+hr{
+  margin-left: 0;
+  margin-right: 10px;
 }
