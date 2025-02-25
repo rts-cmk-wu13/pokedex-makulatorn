@@ -11,7 +11,7 @@ divElm.innerHTML = `
 </span>
 
     <input type="search" class="pokedex-search" name="search" placeholder="search">
-    <button class="pokedex-sort"><img src="/img/3-bars.svg"></button>
+    <button class="icon-sort" id="pokedex-sort"></button>
     </header>
     <main></main>
     <footer>created 2025</footer>

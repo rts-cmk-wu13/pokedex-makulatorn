@@ -32,12 +32,12 @@ img {
   width: 80%;
 }
 
-.pokedex-sort {
+.icon-sort {
   border-radius: 16px;
   background-color: white;
   padding: 5px;
 }
-.pokedex-sort img {
+.icon-sort img {
   height: 12px;
 }
 
@@ -69,6 +69,9 @@ header .icon-pokeball {
   align-items: center;
   justify-content: center;
   box-shadow: inset 1px 1px 4px 2px #c4c4c4;
+}
+.pokelist .pokelist article:nth-last-child(5) {
+  background-color: orange;
 }
 
 .pokecard {
