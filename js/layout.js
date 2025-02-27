@@ -9,10 +9,11 @@ divElm.innerHTML = `
     <i src="/img/pokeball.svg" alt="Pokéball" class="icon-pokeball"></i>
     <h1 class="pokedex-title">Pokédex</h1>
 </span>
-  <search>
-    <input type="search" class="pokedex-search" name="search" placeholder="search">
+<form action="detail.html">
+    <input type="search" class="pokedex-search" name="name" placeholder="search" id="search">
     <button class="icon-sort" id="pokedex-sort"></button>
-    </search>
+</form> 
+<div id="search-suggestions" class="search-suggestions"></div> <!-- Added suggestions div -->
     </header>
     <main></main>
     <footer>created 2025</footer>

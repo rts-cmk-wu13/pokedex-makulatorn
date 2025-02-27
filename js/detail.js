@@ -24,14 +24,15 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
         const maxStatValue = 255;
         const pokemonHtml = `
         <section class="pokemon-detail">
-        <span class="pokemon-detail-name">
-        <button class="icon-arrow_back" type="button" value="Back" onclick="window.history.back()"></button>
+            ${pokemon.types.map(type => `<div class="pokemon-detail-con" style="background-color:${typeColors[pokemon.types[0].type.name]};">`).join('')}
+            <span class="pokemon-detail-name">
+        <button class="icon-arrow_back" type="button" value="Back" onclick="window.history.back()" ></button>
         <h1 class="pokemon-name">${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</h1>
         <p class="pokemon-id">${formattedId}</p>
-        </span>
-                <div class="pokemon-img-con">
-                    <img class="pokemon-img" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png" alt="${pokemon.name}" />
-                </div>
+    </span>
+    ${pokemon.types.map(type => `<div class="pokemon-img-con" style="background-color:${typeColors[pokemon.types[0].type.name]};">`).join('')}
+        <img class="pokemon-img" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png" alt="${pokemon.name}" />
+    </div>
                 <div class="pokemon-txt-con">
                 <div class="pokemon-type-con">
                     <div class="pokemon-type">
