@@ -10,10 +10,18 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
 
         const formattedId = `#${String(pokemon.id).padStart(3, '0')}`;
 
-        function formatName(str){
-            return str.replaceAll('attack','atk').replaceAll('defense','def').replaceAll('special','s').replaceAll('speed','sp');
+        function formatName(str) {
+            return str.replaceAll('attack', 'ATK').replaceAll('defense', 'DEF').replaceAll('special-', 'S').replaceAll('speed', 'SP').replaceAll('hp', 'HP');
         }
 
+        const typeColors = {
+            "grass": "#78C850", "fire": "#F08030", "water": "#6890F0", "bug": "#A8B820",
+            "normal": "#A8A878", "electric": "#F8D030", "ground": "#E0C068", "fairy": "#EE99AC",
+            "fighting": "#C03028", "psychic": "#F85888", "rock": "#B8A038", "ghost": "#705898",
+            "dragon": "#7038F8", "dark": "#705848", "steel": "#B8B8D0", "ice": "#98D8D8",
+            "poison": "#A040A0", "flying": "#A890F0"
+        };
+        const maxStatValue = 255;
         const pokemonHtml = `
         <section class="pokemon-detail">
         <span class="pokemon-detail-name">
@@ -30,35 +38,45 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
                         ${pokemon.types.map(type => `<p>${type.type.name}</p>`).join('')}
                     </div>
                 </div>
-                    <h3 class="pokemon-about">About</h3>
+                <h3 class="pokemon-about" style="color:${typeColors[pokemon.types[0].type.name]};">About</h3>
                     <div class="pokemon-about-info">
+                    <div class="pokemon-about-stats-con">
+                    <p class="icon-weight">${pokemon.weight / 10} Kg</p>
+                    <p class="pokemon-about-stats">Weight</p>
+                    </div>
+                    <hr>
+                     <div class="pokemon-about-stats-con">
+                    <p class="icon-straighten">${pokemon.height / 10} M</p>
+                    <p class="pokemon-about-stats">Height</p>
+                    </div>
+                    <hr>
                     <div>
-                    <p class="icon-weight">${pokemon.weight}</p>
-                    <p>Weight</p>
-                    </div>
-                    <hr>
-                     <div>
-                    <p class="icon-straighten">${pokemon.height}</p>
-                    <p>Height</p>
-                    </div>
-                    <hr>
-                    <div class="pokemon-abilities-list">
                     ${pokemon.abilities.map(ability => `<p>${ability.ability.name}</p>`).join('')}
-                    <p>Moves</p>
+                    <p class="pokemon-about-stats">Moves</p>
                     </div>
                     </div>
-                    <h3 class="pokemon-stats">Stats</h3>
+                <h3 class="pokemon-stats" style="color:${typeColors[pokemon.types[0].type.name]};">Base Stats</h3>
                     <div>
                     <li class="pokemon-stats-list">
                     <div class="pokemon-stat-con">
-        ${pokemon.stats.map(stat => `<label class="pokemon-stat-label">${formatName(stat.stat.name)}</label>`).join('')}
+        ${pokemon.stats.map(stat => {
+            const normalizedValue = (stat.base_stat / maxStatValue) * 100;
+            return `
+            <label class="pokemon-stat-label" style="color:${typeColors[pokemon.types[0].type.name]};">${formatName(stat.stat.name)}</label>
+            `;
+        }).join('')}
                     </div>
                     <hr>
                     <div class="pokemon-stat-con">
         ${pokemon.stats.map(stat => `<p>${stat.base_stat}</p>`).join('')}
                     </div>
                     <div class="pokemon-stat-meter">
-        ${pokemon.stats.map(stat => `<meter class="pokemon-meter" min="0%" max="100%">${stat.base_stat}</meter>`).join('')}
+        ${pokemon.stats.map(stat => {
+            const normalizedValue = (stat.base_stat / maxStatValue) * 100;
+            return `
+            <meter class="pokemon-meter" min="0" max="100" value="${normalizedValue}">${stat.base_stat}</meter>
+            `;
+        }).join('')}
         </div>
         </li>
         </div>

@@ -45,14 +45,14 @@ header {
 header .pokedex-title {
   color: #FFFFFF;
 }
-header .pokedex-title-con {
+header .pokedex-title .pokedex-title-con {
   display: flex;
   align-items: center;
   width: 200px;
   margin-left: 0;
   padding: 1em;
 }
-header .icon-pokeball {
+header .pokedex-title .icon-pokeball {
   color: #FFFFFF;
   font-size: 30px;
   margin-right: 15px;
@@ -66,16 +66,13 @@ header .icon-pokeball {
   border-radius: 8px;
   align-items: center;
   justify-content: center;
-  box-shadow: inset 1px 1px 4px 2px #c4c4c4;
-}
-.pokelist .pokelist article:nth-last-child(5) {
-  background-color: orange;
+  box-shadow: inset 1px 1px 4px 2px #c4c4c4Z;
 }
 
 .pokecard {
   display: grid;
   place-content: center;
-  width: 25%;
+  width: 105px;
   height: 120px;
   margin: 10px;
   padding: 5px;
@@ -89,7 +86,7 @@ header .icon-pokeball {
 .pokecard .pokecard-name {
   text-align: center;
 }
-.pokecard .pokecard-id {
+.pokecard .pokecard-name .pokecard-id {
   float: right;
   color: #666666;
 }
@@ -184,6 +181,11 @@ header .icon-pokeball {
   background-image: linear-gradient(to bottom, #FFFFFF, #FFFFFF 50%, #FB5584 50%, #FB5584);
 }
 
+.pokemon-about[data-type=psychic] {
+  background-color: #FB5584;
+  background-image: linear-gradient(to bottom, #FFFFFF, #FFFFFF 50%, #FB5584 50%, #FB5584);
+}
+
 .pokemon-detail {
   background-color: #FFFFFF;
 }
@@ -222,6 +224,7 @@ header .icon-pokeball {
 
 .pokemon-stat-label {
   display: flex;
+  font-weight: bolder;
 }
 
 .pokemon-stat-meter {
@@ -242,7 +245,13 @@ header .icon-pokeball {
   margin-right: 20px;
 }
 
+.pokemon-about-stats {
+  color: #666666;
+  text-align: center;
+}
+
 hr {
   margin-left: 0;
   margin-right: 10px;
+  color: #E0E0E0;
 }/*# sourceMappingURL=style.css.map */

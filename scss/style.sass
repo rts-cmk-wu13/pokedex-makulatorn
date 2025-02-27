@@ -1,0 +1,215 @@
+@use '../scss/colors'
+@font-face
+  font-family: pokemon
+  src: url(/font/Poppins/Poppins-Regular.ttf)
+
+*
+  margin: 0 auto
+  padding: 0
+  box-sizing: border-box
+  font-family: pokemon
+
+body
+  background-color: colors.$primary
+
+a
+  color: colors.$dark
+  text-decoration: none
+
+.pokecard-img
+  width: 100%
+  height: auto
+  max-width: 72px
+
+.pokedex-search
+  background: rgb(255, 255, 255) url(../img/Vector.svg) left no-repeat
+  padding: 5px 20px 5px 20px
+  border-radius: 16px
+  margin: 0px 10px 24px 20px
+  width: 80%
+
+.icon-sort
+  border-radius: 16px
+  background-color: white
+  padding: 5px
+  color: colors.$primary
+
+header
+  background-color: colors.$primary
+  .pokedex-title
+    color: colors.$white
+
+    .pokedex-title-con
+      display: flex
+      align-items: center
+      width: 200px
+      margin-left: 0
+      padding: 1em
+
+    .icon-pokeball
+      color: colors.$white
+      font-size: 30px
+      margin-right: 15px
+
+.pokelist
+  display: flex
+  flex-wrap: wrap
+  background-color: colors.$white
+  margin: 5px
+  border-radius: 8px
+  align-items: center
+  justify-content: center
+  box-shadow: inset 1px 1px 4px 2px #c4c4c4Z
+
+.pokecard
+  display: grid
+  place-content: center
+  width: 105px
+  height: 120px
+  margin: 10px
+  padding: 5px
+  grid-area: 1/1
+  background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$light 50%, colors.$light)
+  background-size: cover
+  background-repeat: no-repeat
+  border-radius: 8px
+  box-shadow: -1px -1px 8px 3px #c4c4c4
+  .pokecard-name
+    text-align: center
+
+    .pokecard-id
+      float: right
+      color: colors.$medium
+
+.pokecard[data-type="grass"]:hover
+  background-color: colors.$grass
+  background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$grass 50%, colors.$grass)
+
+.pokecard[data-type="fire"]:hover
+  background-color: colors.$fire
+  background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$fire 50%, colors.$fire)
+
+.pokecard[data-type="water"]:hover
+  background-color: colors.$water
+  background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$water 50%, colors.$water)
+
+.pokecard[data-type="electric"]:hover
+  background-color: colors.$electric
+  background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$electric 50%, colors.$electric)
+
+.pokecard[data-type="poison"]:hover
+  background-color: colors.$poison
+  background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$poison 50%, colors.$poison)
+
+.pokecard[data-type="bug"]:hover
+  background-color: colors.$bug
+  background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$bug 50%, colors.$bug)
+
+.pokecard[data-type="dark"]:hover
+  background-color: colors.$dark
+  background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$dark 50%, colors.$dark)
+
+.pokecard[data-type="dragon"]:hover
+  background-color: colors.$dragon
+  background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$dragon 50%, colors.$dragon)
+
+.pokecard[data-type="fairy"]:hover
+  background-color: colors.$fairy
+  background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$fairy 50%, colors.$fairy)
+
+.pokecard[data-type="fighting"]:hover
+  background-color: colors.$fighting
+  background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$fighting 50%, colors.$fighting)
+
+.pokecard[data-type="flying"]:hover
+  background-color: colors.$flying
+  background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$flying 50%, colors.$flying)
+
+.pokecard[data-type="ghost"]:hover
+  background-color: colors.$ghost
+  background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$ghost 50%, colors.$ghost)
+
+.pokecard[data-type="normal"]:hover
+  background-color: colors.$normal
+  background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$normal 50%, colors.$normal)
+
+.pokecard[data-type="ground"]:hover
+  background-color: colors.$ground
+  background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$ground 50%, colors.$ground)
+
+.pokecard[data-type="ice"]:hover
+  background-color: colors.$ice
+  background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$ice 50%, colors.$ice)
+
+.pokecard[data-type="steel"]:hover
+  background-color: colors.$steel
+  background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$steel 50%, colors.$steel)
+
+.pokecard[data-type="rock"]:hover
+  background-color: colors.$rock
+  background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$rock 50%, colors.$rock)
+
+.pokecard[data-type="psychic"]:hover
+  background-color: colors.$psychic
+  background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$psychic 50%, colors.$psychic)
+
+.pokemon-about[data-type="psychic"]
+  background-color: colors.$psychic
+  background-image: linear-gradient(to bottom, colors.$white, colors.$white 50%, colors.$psychic 50%, colors.$psychic)
+
+.pokemon-detail
+  background-color: colors.$white
+  .pokemon-detail-name
+    display: flex
+
+.pokemon-img-con
+  text-align: center
+  .pokemon-img
+    width: 100%
+    height: auto
+    max-width: 250px
+
+.pokemon-type-con
+  text-align: center
+  .pokemon-type
+    display: flex
+    width: 50%
+
+.pokemon-about, .pokemon-stats
+  text-align: center
+
+.pokemon-about-info
+  display: flex
+
+.pokemon-stats-list
+  display: flex
+
+.pokemon-stat-label
+  display: flex
+  font-weight: bolder
+
+.pokemon-stat-meter
+  display: flex
+  flex-direction: column
+  gap: 8px
+  margin-left: 0
+
+.pokemon-meter
+  margin-left: 20px
+  margin-right: 20px
+  width: 180px
+
+.pokemon-stat-con
+  margin-left: 10px
+  margin-right: 20px
+
+.pokemon-about-stats
+  color: colors.$medium
+  text-align: center
+
+.pokemon-about-stats-con
+
+hr
+  margin-left: 0
+  margin-right: 10px
+  color: colors.$light
