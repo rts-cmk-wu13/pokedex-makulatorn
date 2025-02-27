@@ -25,9 +25,9 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
         const pokemonHtml = `
         <section class="pokemon-detail">
         <span class="pokemon-detail-name">
-        <button class="icon-arrow_back"></button>
-        <h1>${pokemon.name}</h1>
-        <p>${formattedId}</p>
+        <button class="icon-arrow_back" type="button" value="Back" onclick="window.history.back()"></button>
+        <h1 class="pokemon-name">${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</h1>
+        <p class="pokemon-id">${formattedId}</p>
         </span>
                 <div class="pokemon-img-con">
                     <img class="pokemon-img" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png" alt="${pokemon.name}" />
@@ -35,7 +35,7 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
                 <div class="pokemon-txt-con">
                 <div class="pokemon-type-con">
                     <div class="pokemon-type">
-                        ${pokemon.types.map(type => `<p>${type.type.name}</p>`).join('')}
+                        ${pokemon.types.map(type => `<p class="pokemon-type-name" style="background-color:${typeColors[type.type.name]};">${type.type.name}</p>`).join('')}
                     </div>
                 </div>
                 <h3 class="pokemon-about" style="color:${typeColors[pokemon.types[0].type.name]};">About</h3>

@@ -73,7 +73,7 @@ const appendToMain = pokeArray => {
             <a class="pokecard-name" href="detail.html?name=${pokemon.name}" style="font-size:80%;">
                 <p class="pokecard-id">#${String(pokemon.id).padStart(3, '0')}</p>
                 <img src="${pokemon.image}" class="pokecard-img" alt="Official artwork of ${pokemon.name}">
-                ${pokemon.name}
+                ${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
             </a>
         </article>
     `).join("");
