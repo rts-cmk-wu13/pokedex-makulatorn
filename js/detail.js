@@ -26,7 +26,7 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
         <section class="pokemon-detail">
             ${pokemon.types.map(type => `<div class="pokemon-detail-con" style="background-color:${typeColors[pokemon.types[0].type.name]};">`).join('')}
             <span class="pokemon-detail-name">
-        <button class="icon-arrow_back" type="button" value="Back" onclick="window.history.back()" ></button>
+        <button class="icon-arrow_back" type="button" value="Back" onclick="window.history.back()" style="background-color:${typeColors[pokemon.types[0].type.name]};" ></button>
         <h1 class="pokemon-name">${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</h1>
         <p class="pokemon-id">${formattedId}</p>
     </span>
